@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Valoración</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html" target="_blank">
+                    <img src="Imagenes/1366_2000.jpg" alt="Logo Tienda Videojuegos">
+                </a>
+            </div>
+            <h1 class="nombre-tienda">VTK</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="login.html" target="_blank">Login</a></li>
+                <li><a href="registro.html"target="_blank">Registro</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <aside class="menu-lateral">
+        <a href="Formulario.html" target="_blank">Formulario</a>
+    </aside>
+
+    <main>
+        <h1>Formulario de Valoración</h1>
+        <form id="form_valor" method="get" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div class="form-row">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-row">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" required>
+                </div>
+                <div class="form-row">
+                    <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                    <input type="datetime-local" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                </div>
+                <div class="form-row">
+                    <label>Sexo:</label>
+                    <input type="radio" id="sexo_h" name="sexo" value="h" required>
+                    <label for="sexo_h">Hombre</label>
+                    <input type="radio" id="sexo_m" name="sexo" value="m">
+                    <label for="sexo_m">Mujer</label>
+                    <input type="radio" id="sexo_m" name="sexo" value="am">
+                    <label for="sexo_m">Aleatorio Modernista Sexual</label>
+                </div>
+                <div class="form-row">
+                    <label for="pais">País de origen:</label>
+                    <input type="text" id="pais" name="pais" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Redes sociales</legend>
+                <div class="form-row">
+                    <label for="redes">Redes sociales donde estás registrado:</label>
+                    <select id="redes" name="redes" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="twitter">Twitter</option>
+                        <option value="instagram">Instagram</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Valoraciones</legend>
+                <div class="form-row">
+                    <label for="felicidad">Rango de felicidad:</label>
+                    <input type="range" id="felicidad" name="felicidad" min="1" max="8" required>
+                </div>
+                <div class="form-row">
+                    <label for="color_opinion">Nota por colores:</label>
+                    <input type="color" id="color_opinion" name="color_opinion" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Equipo</legend>
+                <div class="form-row">
+                    <label for="imagen_producto">Sube una imagen donde aparezca tu producto recibido:</label>
+                    <input type="file" id="imagen_producto" name="imagen_producto" accept="image/*">
+                </div>
+            </fieldset>
+
+            <input type="submit" value="Enviar formulario">
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Contacto</a> | 
+            <a href="#">Términos y Condiciones</a> | 
+            <a href="#">Política de Privacidad</a>
+        </div>
+        <p>© 2024 VTK. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
